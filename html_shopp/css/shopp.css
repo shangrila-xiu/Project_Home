@@ -1,0 +1,579 @@
+﻿/*通用样式*/
+*{
+	margin:0 auto;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:gray;
+	
+}
+a:hover{
+	
+	color:#ff0000;
+}
+/*logo图片样式*/
+#logo{
+margin:0 auto;
+	background:url(../images/logo.jpg);
+	height:140px;
+	width:960px;
+}
+/*导航栏样式*/
+#nav{
+margin:0 auto;
+	width:960px;
+	height:30px;
+	background:url(../images/daohang2.gif);
+	line-height:30px;
+	
+}
+
+#nav .nav a{
+	margin:0 auto;
+	width:96px;
+	height:30px;
+	float:left; /*向左浮动,只要是div的左右排列都需要在每个div中增加*/
+	text-align:center;
+	text-decoration:none;
+	color:#333333;
+	font-weight:bold;
+	
+}
+
+#nav .nav a:hover{
+ background:url(../images/a_over.gif);
+ color:#FFFFFF;
+ }
+  
+ 
+
+/*搜索框样式*/
+.search{
+margin:0 auto;
+text-align:left;
+width:940px;
+height:19px;
+}
+/*banner样式小图片*/
+.banner1{
+margin:0 auto;
+	margin-top:2px;
+	background:url(../images/banner.jpg);
+	height:100px;
+	width:960px;
+	    margin-bottom: 3px;
+}
+
+/*内容部分样式*/
+.content{
+
+	margin:0 auto;
+	width:960px;
+	height:300px;
+
+}
+/*左侧圆角模版left*/
+.left{
+	float:left;
+	width:205px;
+	height:auto;
+	
+}
+.cc{
+	margin-top:1px;
+	height:auto;
+
+}
+
+.left2{
+	margin-top:2px;
+}
+.remai{
+	width:205px;
+	height:auto;
+}
+
+/*圆角的CSS模板*/
+* { margin: 0; padding: 0; font-family: "宋体", Verdana, Geneva, sans-serif, "宋体"; }
+* html * { font-family: "宋体"; }
+.ybtop { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; }
+.ybtop h1, .ybtop h2, .ybtop h3, .ybtop h4, .ybtop h5, .ybtop h6 { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; text-indent: 1em; }
+.ybmid { padding: 5px; border-right-style: solid; border-left-style: solid; border-width: 1px; overflow: hidden; zoom: 1; background:#FAFAFA}
+.ybbot, .ybbot div { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; overflow: hidden; }
+.yblan .ybtop { background-position: left 0px; }
+.yblan .ybtop h1, .yblan .ybtop h2, .yblan .ybtop h3, .yblan .ybtop h4, .yblan .ybtop h5, .yblan .ybtop h6 { background-position: right 0px; line-height: 28px;}
+.yblan .ybmid { border-color: #A9BCCD; }
+.yblan .ybbot { background-position: left -28px; }
+.yblan .ybbot div { background-position: right -28px; height: 3px; }
+.ybcheng .ybtop { background-position: left -31px; }
+.ybcheng .ybtop h1, .ybcheng .ybtop h2, .ybcheng .ybtop h3, .ybcheng .ybtop h4, .ybcheng .ybtop h5, .ybcheng .ybtop h6 { background-position: right -31px; line-height: 28px; }
+.ybcheng .ybbot div { background-position: right -59px; height: 2px; }
+.yblanb .ybtop { background-position: left -61px; }
+.yblanb .ybtop h1, .yblanb .ybtop h2, .yblanb .ybtop h3, .yblanb .ybtop h4, .yblanb .ybtop h5, .yblanb .ybtop h6 { background-position: right -61px; line-height: 30px; }
+.yblanb .ybmid { border-color: #A5BFD6; border-width: 2px; }
+.yblanb .ybbot { background-position: left -91px; }
+.yblanb .ybbot div { background-position: right -91px; height: 4px; }
+/*模板结束*/
+
+
+/*中间部分内容*/
+.middle{
+    float:left;
+	width:480px;
+	height:30px;
+
+	margin-left:2px;
+}
+/*轮播图*/
+#b04 { width: 470px;}
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b04 .dots li 
+{ 
+	display: inline-block; 
+	width: 10px; 
+	height: 10px; 
+	margin: 0 4px; 
+	text-indent: -999em; 
+	border: 2px solid #fff; 
+	border-radius: 6px; 
+	cursor: pointer; 
+	opacity: .4; 
+	-webkit-transition: background .5s, opacity .5s; 
+	-moz-transition: background .5s, opacity .5s; 
+	transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active 
+{
+	background: #fff;
+	opacity: 1;
+}
+#b04 .arrow { position: absolute; top:80px;}
+#b04 #al { left: 6px;}
+#b04 #ar { left: 456px;}
+
+/*快捷方式开始*/
+.kuaijie{
+	width:480px;
+	height:auto;
+}
+.imgs1{
+	float:left;
+	margin-left:10px;
+	
+}
+/*右边部分内容*/
+.right{
+   float:left;
+  width:269px;
+	height:auto;
+	margin-left:2px;
+}
+.right1{}
+ .r1_con{
+	width:250px;
+	height:auto;
+	border-bottom:1px dotted #ccc;
+	margin-top:3px;
+	background:url(../images/bli.gif) no-repeat;
+	padding-left:10px;
+	overflow:hidden;
+	text-overflow:ellipsis;/*当文字超出所列的宽度时，出现省略号*/
+	white-space:nowrap;/*使超出的文字不会换行*/
+}
+.right2{
+	margin-top:2px;
+}
+ .r2_con{
+	width:250px;
+	height:auto;
+	border-bottom:1px dotted #ccc;
+	margin-top:3px;
+	background:url(../images/cli.gif) no-repeat;
+	padding-left:10px;
+	overflow:hidden;
+	text-overflow:ellipsis;/*当文字超出所列的宽度时，出现省略号*/
+	white-space:nowrap;/*使超出的文字不会换行*/
+}
+/*商品展示样式*/
+#sp{
+	margin:0 auto;
+	width:960px;
+	height:161px;
+	margin-top:18px;
+}
+.sp_block{
+margin:0 auto;
+	width:100px;
+	height:120px;
+	margin-top:15px;
+	float:left;	
+	margin-left:15px;
+}
+.sp_photo{
+margin:0 auto;
+	width:98px;
+	height:98px;
+	float:left;
+	
+	border:1px solid #cccccc;
+}
+.sp_photo a{
+	width:98px;
+	height:98px;
+	float:left;
+}
+.sp_photo a:hover{
+	background:#aabbcc;
+}
+.sp_text{
+  margin:0 auto;
+	float:left;
+	width:100px;
+	height:20px;
+	text-align:center;
+	line-height:20px;
+	color:#FF0000;
+	font-weight:bold;
+}
+/*客服在线*/
+#kefu
+{
+	margin:0 auto;
+	width:960px;
+	height:160px;
+	margin-top:21px;
+}
+.kefu_inner{
+	margin:0 auto;
+	
+	width:950px;
+	background:url(../images/kefu.jpg);
+	height:112px;
+}
+.kefu_left{
+	float:left;
+	text-align:left;
+	padding-left:75px;
+	padding-top:45px;
+	margin:0 auto;
+	width:220px;
+	height:67px;
+}
+.kefu_right{
+	float:left;
+
+	margin:0 auto;
+    padding-top: 20px;
+	width:650px;
+	height:92px;
+}
+/*友情链接*/
+.youqing{
+    margin: 0 auto;
+    height: auto;
+    width: 960px;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: 253px;
+    float: left;
+    background: #FFFFF0;
+	
+}
+/*网站根部*/
+#footer{
+	margin:0 auto;
+	margin-top:4px;
+	margin-left:271px;
+	text-align:center;
+	width:960px;
+	height:95px;
+	float:left;
+	background:url(../images/footer.gif);
+}
+.banquan{
+	text-align:center;
+	margin-top:4px;
+	padding-top:12px;
+	font-size:14px;
+}
+
+/*首页样式截止*/
+
+/*商城简介开始*/
+#middle{
+	height:400px;
+	width:960px;
+	margin:0 auto;
+	margin-top:2px;
+}
+
+/*商城简介的活动公告*/
+.right3{
+	margin-top:2px;
+}
+ .r3_con{
+	width:205px;
+	height:auto;
+	border-bottom:1px dotted #ccc;
+	margin-top:3px;
+	background:url(../images/cli.gif) no-repeat;
+	padding-left:10px;
+	overflow:hidden;
+	text-overflow:ellipsis;/*当文字超出所列的宽度时，出现省略号*/
+	white-space:nowrap;/*使超出的文字不会换行*/
+}
+
+/*网站意见*/
+.wzyj{
+margin:0 auto;
+	margin-top:2px;
+	float:left;
+}
+.advice{
+margin:0 auto;
+	padding-left:2px;
+}
+.main_content{
+	margin:0 auto;
+	width:753px;
+	height:400px;
+	margin-left:2px;
+	float:left;
+}
+
+.youqing1{
+margin:0 auto;
+	height:auto;
+	width:960px;
+	text-align:center;
+	background:#FFFFF0;
+	margin-top: 284px;
+}
+
+.scjy{
+	height:636px;
+	width:750px;
+	
+}
+
+/*活动公告和最新优惠*/
+.right4{
+	margin-top:2px;
+	width:746px;
+	height:auto;
+}
+
+.r4_con{
+border-bottom:1px dotted #ccc;
+height:24px;
+}
+ .r4_con a{
+	 float:left;
+	width:438px;
+	height:auto;
+	
+	margin-top:3px;
+	background:url(../images/cli.gif) no-repeat;
+	padding-left:10px;
+	overflow:hidden;
+	text-overflow:ellipsis;/*当文字超出所列的宽度时，出现省略号*/
+	white-space:nowrap;/*使超出的文字不会换行*/
+}
+
+/*显示页数*/
+.page{
+	width:100%;
+	height:20px;
+	text-align:center;
+	float:left;
+	margin-top:4px;
+}
+.page1{
+	float:left;
+	margin-left:32px;
+	        margin-left: 564px;
+    margin-top: -17px;
+}
+
+/*购物流程样式*/
+.gwlc{
+	width:960px;
+	height:768px;
+	margin-top:2px;
+}
+
+.left5{
+margin:0 auto;
+	width:205px;
+	height:12px;
+	float:left;
+	margin-left:192px;
+	
+}
+.right5{
+     margin: 0 auto;
+    width: 754px;
+    height: 12px;
+    float: left;
+    margin-left: 400px;
+    margin-top: -12px;
+}
+/*商品详细信息*/
+.l_left{
+	height:548px;
+	margin:0 auto;
+}
+.ul_daohang1 li a{
+	margin:0 auto;
+	width:192px;
+	height:39px;
+	float:left; /*向左浮动,只要是div的左右排列都需要在每个div中增加*/
+	text-align:center;
+	text-decoration:none;
+	color:#333333;
+	
+}
+.ul_daohang1 li a:hover{
+	background:#FF6347;
+}
+#sp_detail{
+	height:210px;
+	margin:0 auto;
+	
+}
+.l_detail{
+	width:221px;
+	height:210px;
+	margin-left:9px;
+	float:left;
+}
+.detail_block{
+	margin-left:32px;
+	border:1px solid #ccc;
+}
+.detail_photo{
+	height:183px;
+	width:186px;
+}
+.look_big{
+	height:20px;
+	width:131px;
+	margin-top:5px;
+	margin-left:59px;
+}
+
+.r_detail{
+	float:left;
+	margin-left:20px;
+}
+.r_detail .detail_title
+{
+	font-size:34px;
+	font-weight:bold;
+	color:#8B8989;
+}
+.r_detail span{
+		font-size:13px;
+}
+/*售价*/
+.sj{
+ font-size:47px;
+ font-weight:bold;
+ color:#ff0000;
+}
+.ico{
+	height:5px;
+	width:5px;
+	border:1px solid #ccc;
+	
+}
+.num{
+	width:37px;
+}
+
+.fr_cart{
+	font-weight:bold;
+	background:rgb(203,2,0);
+	border:0;
+	color:#ffffff;
+	height:28px;
+	width:127px;
+}
+.jx_ck{
+display:inline-block;
+	font-weight:bold;
+	background:rgb(203,2,0);
+	height:28px;
+	color:#ffffff;
+	font-size:12px;
+	text-align:center;
+	line-height:28px;
+	width:127px;
+}
+.jx_ck:hover{
+	color:#ffffff;
+}
+
+.detail_bottom{
+width:732px;
+height:318px;
+margin-top:20px;
+	border-top:1px dotted #ccc;
+}
+.clear{
+	height:10px;
+}
+.detail_bottom span{
+	padding-top:10px;
+	font-size:8px;
+	float:left;
+}
+.sp_detail1{
+	float:left;
+	margin-top:9px;
+	margin-left:-3px;
+}
+.youqing2{
+    margin: 0 auto;
+    height: auto;
+    width: 960px;
+    text-align: center;
+    margin-top: -165px;
+    margin-left: 195px;
+    float: left;
+    background: #FFFFF0;
+	
+}
+#footer1{
+	    margin: 0 auto;
+    margin-top: -141px;
+    margin-left: 191px;
+    text-align: center;
+    width: 960px;
+    height: 95px;
+    float: left;
+    background: url(../images/footer.gif);
+}
+
+/*商品展示信息*/
+.r_detail1{
+	float:left;
+	margin-left:6px;
+}
+.detail_block1{
+	float:left;
+	margin-left:0px;
+	border:1px solid #ccc;
+}
+.detail_photo1{
+	    height: 101px;
+    width: 98px;
+    float: left;
+}
+.display_name{
+	
+	padding-top:3px;
+	text-align: center;
+	
+}

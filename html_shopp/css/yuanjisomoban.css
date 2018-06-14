@@ -1,0 +1,21 @@
+/*圆角模板样式开始*/
+* { margin: 0; padding: 0; font-family: "微软雅黑", Verdana, Geneva, sans-serif, "微软雅黑"; }
+* html * { font-family: "微软雅黑"; }
+.ybtop { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; }
+.ybtop h1, .ybtop h2, .ybtop h3, .ybtop h4, .ybtop h5, .ybtop h6 { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; text-indent: 1em; }
+.ybmid { padding: 5px; border-right-style: solid; border-left-style: solid; border-width: 1px; overflow: hidden; zoom: 1; background:#FAFAFA}
+.ybbot, .ybbot div { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; overflow: hidden; }
+.yblan .ybtop { background-position: left 0px; }
+.yblan .ybtop h1, .yblan .ybtop h2, .yblan .ybtop h3, .yblan .ybtop h4, .yblan .ybtop h5, .yblan .ybtop h6 { background-position: right 0px; line-height: 28px;}
+.yblan .ybmid { border-color: #A9BCCD; }
+.yblan .ybbot { background-position: left -28px; }
+.yblan .ybbot div { background-position: right -28px; height: 3px; }
+.ybcheng .ybtop { background-position: left -31px; }
+.ybcheng .ybtop h1, .ybcheng .ybtop h2, .ybcheng .ybtop h3, .ybcheng .ybtop h4, .ybcheng .ybtop h5, .ybcheng .ybtop h6 { background-position: right -31px; line-height: 28px; }
+.ybcheng .ybbot div { background-position: right -59px; height: 2px; }
+.yblanb .ybtop { background-position: left -61px; }
+.yblanb .ybtop h1, .yblanb .ybtop h2, .yblanb .ybtop h3, .yblanb .ybtop h4, .yblanb .ybtop h5, .yblanb .ybtop h6 { background-position: right -61px; line-height: 30px; }
+.yblanb .ybmid { border-color: #A5BFD6; border-width: 2px; }
+.yblanb .ybbot { background-position: left -91px; }
+.yblanb .ybbot div { background-position: right -91px; height: 4px; }
+/*圆角模板样式结束*/

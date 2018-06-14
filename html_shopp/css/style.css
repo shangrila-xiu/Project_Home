@@ -1,0 +1,150 @@
+html,body
+{
+	margin:0 auto;
+	padding:0 auto;
+	font-size:13px;
+	text-align:center;
+}
+a
+{
+	text-decoration:none;
+	color:#444444;
+}
+a:hover
+{
+	color:#FF0000;
+}
+#main
+{
+	margin:0 auto;
+	width:960px;
+	height:auto;
+	text-align:center;
+}
+#logo
+{
+	margin:0 auto;
+	width:960px;
+	height:140px;
+	background:url(../images/logo.jpg);
+}
+#menu
+{
+	margin:0 auto;
+	width:960px;
+	height:30px;
+	background:url(../images/daohang2.gif);
+	line-height:30px;
+}
+#sub_menu
+{
+	margin:0 auto;
+	width:96px;
+	height:30px;
+	float:left; /*向左浮动,只要是div的左右排列都需要在每个div中增加*/
+}
+#sub_menu a /*对sub_menu中的链接进行定义*/
+{
+	margin:0 auto;
+	width:96px;
+	height:30px;
+	float:left;
+	text-decoration:none;
+	color:#333333;
+	font-weight:bold;
+}
+#sub_menu a:hover /*当鼠标经过sub_menu中的链接时*/
+{
+	background:url(../images/a_over.gif);
+	color:#FFFFFF;
+}
+#search
+{
+	margin:0 auto;
+	width:950px;
+	height:30px;
+	background:#FAFAFA;
+	text-align:left;
+	padding-left:10px;
+	line-height:30px;
+}
+#banner
+{
+	margin:0 auto;
+	width:960px;
+	height:100px;
+	background:url(../images/banner.jpg);
+}
+#b1
+{
+	margin:0 auto;
+	width:960px;
+	height:auto;
+	margin-top:2px;
+}
+#b1_left
+{
+	margin:0 auto;
+	width:200px;
+	height:auto;
+	float:left;
+}
+#b1_center
+{
+	margin:0 auto;
+	width:498px;
+	height:auto;
+	float:left;
+	margin-left:2px;
+}
+#b1_right
+{
+	margin:0 auto;
+	width:258px;
+	height:auto;
+	float:left;
+	margin-left:2px;
+}
+#login
+{
+	margin:0 auto;
+	width:200px;
+	height:auto;
+}
+#remai
+{
+	margin:0 auto;
+	width:200px;
+	height:auto;
+	margin-top:2px;
+}
+/*圆角的CSS模板*/
+* { margin: 0; padding: 0; font-family: "宋体", Verdana, Geneva, sans-serif, "宋体"; }
+* html * { font-family: "宋体"; }
+.ybtop { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; }
+.ybtop h1, .ybtop h2, .ybtop h3, .ybtop h4, .ybtop h5, .ybtop h6 { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; text-indent: 1em; }
+.ybmid { padding: 5px; border-right-style: solid; border-left-style: solid; border-width: 1px; overflow: hidden; zoom: 1; background:#FAFAFA}
+.ybbot, .ybbot div { background-image: url(../images/bg.rbar.png); background-repeat: no-repeat; overflow: hidden; }
+.yblan .ybtop { background-position: left 0px; }
+.yblan .ybtop h1, .yblan .ybtop h2, .yblan .ybtop h3, .yblan .ybtop h4, .yblan .ybtop h5, .yblan .ybtop h6 { background-position: right 0px; line-height: 28px;}
+.yblan .ybmid { border-color: #A9BCCD; }
+.yblan .ybbot { background-position: left -28px; }
+.yblan .ybbot div { background-position: right -28px; height: 3px; }
+.ybcheng .ybtop { background-position: left -31px; }
+.ybcheng .ybtop h1, .ybcheng .ybtop h2, .ybcheng .ybtop h3, .ybcheng .ybtop h4, .ybcheng .ybtop h5, .ybcheng .ybtop h6 { background-position: right -31px; line-height: 28px; }
+.ybcheng .ybbot div { background-position: right -59px; height: 2px; }
+.yblanb .ybtop { background-position: left -61px; }
+.yblanb .ybtop h1, .yblanb .ybtop h2, .yblanb .ybtop h3, .yblanb .ybtop h4, .yblanb .ybtop h5, .yblanb .ybtop h6 { background-position: right -61px; line-height: 30px; }
+.yblanb .ybmid { border-color: #A5BFD6; border-width: 2px; }
+.yblanb .ybbot { background-position: left -91px; }
+.yblanb .ybbot div { background-position: right -91px; height: 4px; }
+/*模板结束*/
+table
+{
+	line-height:25px;
+}
+.t1
+{
+	width:150px;
+	height:15px;
+}
