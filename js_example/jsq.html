@@ -1,0 +1,42 @@
+第一个数：<input type=text id=first><p>
+第二个数：<input type=text id=second><p>
+<input type=button value=+ onclick="op('+')">
+<input type=button value=- onclick="op('-')">
+<input type=button value=* onclick="op('*')">
+<input type=button value=/ onclick="op('/')"><p>
+结果：<input type=text id=result>
+<script language="javascript">
+function op(fuhao)
+{
+	var first=parseInt(document.getElementById("first").value);
+	var second=parseInt(document.getElementById("second").value);
+	switch(fuhao)
+	{
+		case '+':
+			var value=first+second;
+			document.getElementById("result").value=value;
+			break;
+		case '-':
+			var value=first-second;
+			document.getElementById("result").value=value;
+			break;
+		case '*':
+			var value=first*second;
+			document.getElementById("result").value=value;
+			break;
+		case '/':
+			if(second!=0)
+			{
+				var value=first/second;
+				document.getElementById("result").value=value;
+			}
+			else
+			{
+				alert("除数不能为0!");
+				document.getElementById("second").value="";
+				document.getElementById("second").focus();
+			}
+			break;
+	}
+}
+</script>

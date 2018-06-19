@@ -1,0 +1,26 @@
+<meta charset=utf-8>
+<body bgcolor="#ccc">
+<table border=0 width=960 style="margin:0 auto;">
+	<tr align=center>
+		<td><img src="images/p1.jpg" width=200 height=200 onmouseover="show('p1')" onmouseout="out('p1')"></td>
+		<td><img src="images/p2.jpg" width=200 height=200 onmouseover="show('p2')" onmouseout="out('p2')"></td>
+		<td><img src="images/p3.jpg" width=200 height=200 onmouseover="show('p3')" onmouseout="out('p3')"></td>
+		<td><img src="images/p4.jpg" width=200  height=200 onmouseover="show('p4')" onmouseout="out('p4')"></td>
+		<td><img src="images/p5.jpg" width=200 height=200  onmouseover="show('p5')" onmouseout="out('p5')"></td>	
+	</tr>
+	<tr align="center">
+		<td colspan=5><img src="images/space.jpg" width=750 id="photo"></td>
+	</tr>
+</table>
+
+<script>
+	function show(o){
+		var p=document.getElementById('photo');
+		p.src="images/"+o+".jpg";
+	}
+	function out(i){
+		var p=document.getElementById('photo');
+		p.src="images/space.jpg";
+	}
+</script>
+</body>
