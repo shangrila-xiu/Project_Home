@@ -1,0 +1,19 @@
+<meta charset=utf-8>
+<input type=button value=得到html标签以下的对象的引用 onclick="my()">
+<input type=button value=改变页面的标题 onclick="mytitle()">
+<input type=button value=得到页面的标题 onclick="mygettitle()">
+<script language="javascript">
+function my()
+{
+	alert(document.documentElement); //可以得到对HTML对象的引用
+}
+function mytitle()
+{
+	var str=prompt("请输入页面的标题：","");
+	document.title=str;
+}
+function mygettitle()
+{
+	alert("标题："+document.title);
+}
+</script>

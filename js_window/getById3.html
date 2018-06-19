@@ -1,0 +1,24 @@
+<meta charset=utf-8>
+<style type="text/css">
+#money
+{
+	color:#f20000;
+	font-size:30px;
+	font-weight:bold;
+}
+</style>
+单价：￥100元<p>
+订购数量：<input type=button value='<' onclick="op('<')"> <input type=text id=num size=5 value=0 readonly style="text-align:center"> <input type=button value='>' onclick="op('>')"><p>
+应付金额：￥<span id=money>0</span>元
+<script language="javascript">
+function op(t)
+{
+	var value=parseInt(document.getElementById("num").value);
+	if(t=='>')
+	{
+		value++;
+		document.getElementById("num").value=value;
+		document.getElementById("money").innerHTML=value*100;
+	}
+}
+</script>

@@ -1,0 +1,55 @@
+<meta charset=utf-8>
+<style type="text/css">
+.bg
+{
+	width:50px;
+	height:30px;
+	background:#000000;
+	color:#00FF00;
+	font-weight:bold;
+	text-align:center;
+	font-size:30px;
+}
+</style>
+离考试结束还有：<input type=text id=hour class=bg value=1 readonly> 小时 <input type=text id=minute class=bg readonly value=1> 分钟 <input type=text id=second class=bg readonly value=0> 秒 <hr>
+<input type=button value=开始考试 id=btn1 onclick="mystart()">
+<input type=button value=答完提交 id=btn2 disabled onclick="mysubmit()">
+<script language="javascript">
+function mystart()
+{
+	document.getElementById("btn1").disabled=true; //让开始考试按钮不可用
+	document.getElementById("btn2").disabled=false; //答完提交可用
+	var hour=document.getElementById("hour").value;
+	var minute=document.getElementById("minute").value;
+	var second=document.getElementById("second").value;
+	if(second==0) //秒数为0
+	{
+		second=60;
+		second--;
+		if(minute==0)
+		{
+			if(hour>0) //小时还可以借位
+			{
+				hour--; //小时减1
+				document.getElementById("hour").value=hour;
+				minute=60;
+			}
+			else
+			{
+				hour=0;
+				document.getElementById("hour").value=hour;
+				minute=60;
+			}
+		}
+		minute--; //正常分钟减1
+		document.getElementById("second").value=second;
+		document.getElementById("minute").value=minute;
+	}
+	else //秒数不为0
+	{
+		second--;
+		document.getElementById("second").value=second;
+	}
+	setTimeout("mystart()",1000);
+}
+</script>

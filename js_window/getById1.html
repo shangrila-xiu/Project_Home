@@ -1,0 +1,26 @@
+<meta charset=utf-8>
+输入字符串：<input type=text id=str><p>
+<a href=http://www.baidu.com id=mylink>百度</a>
+<ul>
+	<li id=li1>第一项</li>
+</ul>
+<hr>
+<input type=button value=采集文本框数据 onclick="my1()">
+<input type=button value=采集非组件类型数据 onclick="my2()">
+<script language="javascript">
+function my1()
+{
+	var o=document.getElementById("str");
+	alert(o.value);
+}
+function my2()
+{
+	var o=document.getElementById("mylink");
+	alert(o.innerHTML); //非组件的采集数据方式
+	alert(o.href);
+	o.innerHTML="腾讯";
+	o.href="http://www.qq.com";
+	var o1=document.getElementById("li1");
+	alert(o1.innerHTML);
+}
+</script>

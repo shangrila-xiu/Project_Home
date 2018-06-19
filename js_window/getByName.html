@@ -1,0 +1,44 @@
+<meta charset=utf-8>
+1、<input type=checkbox name=ck value=1><p>
+2、<input type=checkbox name=ck value=2><p>
+3、<input type=checkbox name=ck value=3><p>
+4、<input type=checkbox name=ck value=4><p>
+5、<input type=checkbox name=ck value=5><hr>
+<input type=button value=全部选中 onclick="selectall()">
+<input type=button value=全部取消 onclick="resetall()">
+<input type=button value=全部删除 onclick="deleteall()">
+<script language="javascript">
+function selectall()
+{
+	var o=document.getElementsByName("ck"); //取名字为ck的元素存为数组
+	//alert(o.length);
+	for(i=0;i<o.length;i++)
+	{
+		o[i].checked=true; //让复选框的选中状态为真
+	}
+}
+function resetall()
+{
+	var o=document.getElementsByName("ck"); //取名字为ck的元素存为数组
+	for(i=0;i<o.length;i++)
+	{
+		o[i].checked=false;
+	}
+}
+function deleteall()
+{
+	var o=document.getElementsByName("ck"); //取名字为ck的元素存为数组
+	var s="";
+	for(i=0;i<o.length;i++)
+	{
+		if(o[i].checked==true)
+		{
+			s=s+o[i].value+"|";
+		}
+	}
+	if(s=="")
+		alert("请至少选择一项!");
+	else
+		alert(s);
+}
+</script>

@@ -1,0 +1,15 @@
+<meta charset=utf-8>
+<ul>
+	<li id=first>每一项内容</li>
+</ul>
+<hr>
+<input type=button value=增加一项 onclick="myadd()">
+<script language="javascript">
+function myadd()
+{
+	var newli=document.createElement("li");
+	newli.innerHTML="增加的内容";
+	var first=document.getElementById("first");
+	document.body.appendChild(newli);
+}
+</script>
