@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	
+		
+	<header class="mui-bar mui-bar-nav"></header>
+	<div class="mui-content">
+		<!--Dom构造开始-->
+		<!--<div class="mui-slider">
+			<div class="mui-slider-group ">
+				第一个内容区容器
+				<div class="mui-slider-item">
+					具体内容1
+				</div>
+				第二个内容区
+				<div class="mui-slider-item">
+					具体内容2
+				</div>
+			</div>
+		</div>-->
+		<!--Dom构造结束-->
+		
+		<!--轮播循环：则需要在.mui-slider-group节点上增加.mui-slider-loop-->
+				<!--<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				第一个内容区容器
+				<div class="mui-slider-item">
+					具体内容1
+				</div>
+				第二个内容区
+				<div class="mui-slider-item">
+					具体内容2
+				</div>
+			</div>
+		</div>-->
+		<!--设置轮播循环截至-->
+		
+		<!--轮播循环设置之后：添加图片-->
+		<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<!--支持循环，需要重复图片节点-->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="images/p5.jpg"/><p>5</p></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/p1.jpg"/><p>1</p></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/p2.jpg"/><p>2</p></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/p3.jpg"/><p>3</p></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/p4.jpg"/><p>4</p></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/p5.jpg"/><p>5</p></a>
+				</div>
+				<!--支持循环，需要重复图片节点-->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="images/p1.jpg"/><p>1</p></a>
+				</div>
+			</div>
+			<!--显示圆点开始-->
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		<!--显示圆点结束-->
+		</div>
+		<!--增加一个按钮，直接跳转到第几个图片-->
+		<button type="button" class="mui-btn mui-btn-primary" onclick='changeImg(2);'>切换到第3张图片</button>
+		</div>
+	
+	<script language="JavaScript">
+		mui.plusReady(function(){
+		document.querySelector(".mui-slider").addEventListener('slide',function(event){
+			mui.toast("当前浏览的是第"+ (event.detail.slideNumber+1)+"张")
+			});
+		});
+		function changeImg(index){
+				var gallery=mui('.mui-slider');
+				gallery.slider().gotoItem(index);//跳转到第index张图片，index是从0开始
+			}
+	</script>
+	<!--以下是原理-->
+	<!--<script language="JavaScript">
+		var item2Show=false,item3Show=false;//子选项卡是否显示标志
+		document.querySelector(".mui-slider").addEventListener('slide',function(event){
+			if (event.detail.slideNumber===1&&!item2Show) {
+				//切换到第二个选项卡
+				//根据具体业务，动态获得第二个选项卡内容
+				var content="item2show";
+				//显示内容
+				document.getElementById("item2").innerHTML=content;
+				//改变标志位，下次直接显示
+				item2Show=true;
+			} else{
+				//切换倒第三个选项卡
+				//根据具体业务，动态获得第三个选项卡的内容
+				var content="item3show";
+				//显示内容
+				document.getElementById("item3").innerHTML=content;
+				//改变坐标位，下次直接显示
+				item3Show=true;
+			}
+		});
+	</script>-->
+</body>
+</html>
