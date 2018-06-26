@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">普通列表</h1>
+	</header>
+	
+	<div class="mui-content">
+		<ul class="mui-table-view">
+			<!--mui-navigate-right:在右侧增加导航箭头，变成导航链接-->
+			<li class="mui-table-view-cell"><a class="mui-navigate-right">item1</a></li>
+			<li class="mui-table-view-cell"><a class="mui-navigate-right">item2</a></li>
+			<li class="mui-table-view-cell"><a class="mui-navigate-right">item3</a></li>
+			<li class="mui-table-view-cell"><a class="mui-navigate-right">item4</a></li>
+		</ul>
+		
+		<!--mui支持将数字角标、按钮、开关等控件放在列表中；mui默认将数字角标放在右侧显示-->
+		
+	<h4 class="mui-popup-title">mui支持数字角标，按钮，开关等控件</h4>
+	
+		<ul class="mui-table-view">
+			<!--mui-navigate-right:在右侧增加导航箭头，变成导航链接-->
+			<li class="mui-table-view-cell">item1<span class="mui-badge mui-badge-primary">I1</span></li>
+			<li class="mui-table-view-cell">item2<span class="mui-badge mui-badge-success">I2</span></li>
+			<li class="mui-table-view-cell">item3<span class="mui-badge mui-badge-warning">I3</span></li>
+			<li class="mui-table-view-cell">item4<span class="mui-badge mui-badge-danger">I4</span></li>
+		</ul>
+		
+		<h4 class="mui-popup-title">图文列表</h4>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img src="images/p1.jpg" class="mui-media-object mui-pull-left" />
+					<div class="mui-media-body">
+						幸福
+						<p class="mui-ellipsis">能和心爱的人在一起睡绝，是件幸福的事：可是，打呼噜怎么办？</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img src="images/p2.jpg" class="mui-media-object mui-pull-left" />
+					<div class="mui-media-body">
+						木屋
+						<p class="mui-ellipsis">总是想要这样的一间木屋，夏天挫冰吃瓜，冬天围炉取暖。</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		
+	</div>
+</body>
+</html>
