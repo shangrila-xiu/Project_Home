@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();//初始化
+      	//动态添加的元素需要重新初始化
+      	mui('.mui-input-row input').input();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav"></header>
+	<div class="mui-content">
+		<h2 >快速删除，只需要在input中添加.mui-input-clear类，输入内容时，右侧会有一个 × </h2>
+		<form class="mui-input-group">
+			<div class="mui-input-row">
+				<label>快速删除</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入内容"/>
+			</div>
+		</form>
+		
+		<h2 >搜索框：在.mui-input-row的同级加上.mui-input-search</h2>
+		<form class="mui-input-group">
+			<div class="mui-input-row mui-search">
+				<input type="search" class="mui-input-clear" placeholder="hcoder" />
+			</div>
+		</form>
+		
+		
+		<h3 >密码框：只需要在input中添加.mui-input-password</h3>
+		<form class="mui-input-group">
+			<div class="mui-input-row">
+				<label>密码框</label>
+				<input type="password" class="mui-input-password" placeholder="请输入密码" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>
