@@ -1,0 +1,15 @@
+{
+	"index.html": {
+		"resources": [
+			"sub.html"
+		],
+		"refer": [
+			"sub.html"
+		]
+	},
+	"sub.html": {
+		"refer": [
+			"test.html"
+		]
+	}
+}

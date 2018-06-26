@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h3 class="mui-title">test</h3>
+	</header>
+	<div class="mui-content">
+		<div>姓名：<span id='name'></span></div>
+		<div>年龄：<span id='age'></span></div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		var sDate=plus.webview.currentWebview();
+      		var nameObj=mui('#name');
+      		nameObj[0].innerHTML=sDate.name;
+      		var ageObj=mui('#age');
+      		ageObj[0].innerHTML=sDate.age;
+      	});
+    </script>
+</body>
+</html>
