@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-aciton-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">滑块进度条</h1>
+	</header>
+	
+	<div class="mui-content">
+		<div style="padding: 10px;">
+			<div id="demo1" class="mui-progressbar" >
+				<span></span>
+			</div>
+			<span id="demo2">0%</span>
+		</div>
+		<div style="padding: 10px;">
+			<button type="button" class="mui-btn mui-btn-primary" onclick="showPro();">展示进度条</button>
+		</div>
+		
+		<h4 class="mui-popup-title">滑块</h4>
+		<div class="mui-input-row mui-input-range">
+			<label>Range</label>
+			<input type="range" min='0' max='100' value="20" id="range1"/>
+			<div style="padding: 20px;">
+				<button type="button" class="mui-btn mui-btn-danger" onclick="getVal();" style="width: 150px;" >获取滑块的值</button>
+			</div>
+		</div>
+		
+		<h4 class="mui-popup-title">switch开关</h4>
+		<label>1</label><div class="mui-switch" >
+			<div class="mui-switch-handle"></div>
+		</div>
+			<!--若希望开关是打开状态，只需要在.mui-switch节点上
+				增加.mui-active类即可-->
+		<label>2</label><div class="mui-switch mui-active" >
+			<div class="mui-switch-handle"></div>
+		</div>
+		<!--若希望隐藏on/off文字提示，变成简洁模式，
+		需要在.mui-switch节点上增加.mui-switch-mini类-->
+		<label>3</label><div class="mui-switch mui-switch-mini" >
+			<div class="mui-switch-handle"></div>
+		</div>
+		<label>4</label><div class="mui-switch mui-active mui-switch-mini" id="mySwitch">
+			<div class="mui-switch-handle"></div>
+		</div>
+		<!--mui默认是绿色的开关控件，但是还提供蓝色的开关控件，只需要在.mui-switch节点上增加.mui-switch-blue即可-->
+		<label>5</label><div class="mui-switch mui-switch-blue mui-switch-mini" >
+			<div class="mui-switch-handle" ></div>
+		</div>
+		
+	</div>
+	<!--进度条的js代码-->
+	<!--<script>
+		mui('#demo1').progressbar({progress:20}).show();
+	</script>-->
+	
+	<script language="JavaScript">
+		function showPro(){
+			var obj=mui('#demo1');
+			var b=0;
+			setInterval(function(){
+				if(b<100){
+					obj.progressbar({progress:b}).show();
+					b=b+10;
+					document.getElementById("demo2").innerHTML=b+"%";
+				}
+			},1000);}
+	</script>
+	
+	<!--滑块的js代码-->
+	<script language="JavaScript">
+		function getVal(){
+			var rangeObj=mui("#range1");
+			mui.toast(rangeObj[0].value);
+		}
+	</script>
+	
+	<!--开关控件的js代码-->
+	<script language="JavaScript">
+//		<!--若要获得当前的开关状态，可通过判断当前开关控件是否包含.mui-active类来实现-->
+		var switchObj=document.getElementById("mySwitch");
+		var isActive=switchObj.classList.contains("mui-active");
+		if (isActive) {
+			mui.toast("打开状态！");
+		} else{
+			mui.toast("关闭状态！");
+			
+		}
+		//若要使用js打开、关闭开关控件，可是又switch插件toggle()方法
+//		mui("#mySwitch2").switch().toggle();
+	</script>
+	<script language="JavaScript">
+		mui.plusReady(
+			function(){
+				document.getElementById("mySwitch").addEventListener('toggle',function(e){
+					if (e.detail.isActive) {
+						mui.toast("打开状态");
+					} else{
+						mui.toast("关闭状态");
+					}
+					
+				});
+			});
+	</script>
+</body>
+</html>
