@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">hello 事件</h1>
+	</header>
+	<div class="mui-content">
+		<p>事件绑定，addEventListener()方法监听某个特定元素的事件外，也可以使用on()方法实现批量元素的事件绑定</p>
+		<button type="button"  id='btn1' class="mui-btn mui-btn-primary">点击弹出框</button>
+		<ul id='list1'>
+			<li>小明</li>
+			<li>小花</li>
+			<li>小萌</li>
+		</ul>
+		
+		<form class="mui-input-group">
+			<div class="mui-input-row">
+				<label>姓名：</label>
+				<input type="text" placeholder="请输入名字" class="mui-input-clear" />
+			</div>
+			<div class="mui-input-row" style="margin-right: 12px;">
+				<button type="submit" style="width: 120px;" class="mui-btn mui-btn-primary" id="submit">点击触发事件</button>
+			</div>
+			</form>
+
+		
+	</div>
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		document.getElementById("btn1").addEventListener('tap',function(){
+      			alert(1);
+      		});
+      		mui('#list1').on('tap','li',function(){
+      			var thisHtml=this.innerHTML;
+      			alert(thisHtml);
+      		});
+      		//事件取消
+      		//mui('#list1').off('tap','li');
+      	
+      	});
+      	//事件触发mui.trigger()方法可以动态的出发特定Dom元素上的事件
+      	var btn=document.getElementById("submit");//监听点击事件
+      	btn.addEventListener('tap',function(){
+      		mui.toast("tap event trigger");//出发submit按钮的点击事件
+      		mui.trigger(btn,'tap');
+      	});
+    </script>
+</body>
+</html>
