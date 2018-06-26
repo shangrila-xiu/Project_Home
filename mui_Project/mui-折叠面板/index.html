@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon-left-nav mui-pull-left"></a>
+		<h5 class="mui-title">hello 折叠面板</h5>
+	</header>
+	
+	<div class="mui-content">
+		<!--折叠面板开始-->
+		<div class="mui-card"><!--外层必须是mui-card包裹-->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">面板一</a>
+					<div class="mui-collapse-content">
+						<p>面板一内容</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">面板二</a>
+					<div class="mui-collapse-content">
+						<p>面板二内容</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<!--折叠面板结束-->
+		
+	</div>
+	
+</body>
+</html>
