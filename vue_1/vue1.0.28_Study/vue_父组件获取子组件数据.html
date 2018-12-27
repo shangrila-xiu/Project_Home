@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>vue父子组件：父组件获取子组件的数据</title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript" src="bower_components/vue/dist/vue.js"></script>
+	<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background: #f0f;
+		}
+		
+	</style>
+</head>
+<body>
+	<!-- 
+	父子组件：
+		默认情况下，子组件不能访问父组件的数据
+
+	组件数据传递：
+		1、父组件就想获取子组件的数据data
+		
+			在子组件内写：子组件将数据发送给父组件
+				this.$emit('事件名称','数据');
+			在父组件中接收：
+	 -->
+	 <div id="box">
+		<aaa></aaa>
+		
+	 </div>
+
+	<template id="aaa">
+		<span>我是父组件->{{msga}}</span>
+		<!-- <input type="button" name="" value="获取子组件数据" @fu=""> -->
+		<bbb @child-msg="get"></bbb>
+	</template>
+
+	<template id="bbb">
+
+		<h4>我是子组件</h4>
+		<input type="button" name="" value="send" @click="send">
+	</template>
+
+	
+
+	 <script type="text/javascript"> 		
+	 	var vm = new Vue({
+	 		
+	 		components:{
+	 			'aaa':{
+	 				data(){
+	 					return{
+	 						msga:'父组件数据'
+	 					}
+	 				},
+	 				template:'#aaa',
+	 				methods:{
+	 					get(childmsg){
+	 						this.msga=childmsg;
+	 					}
+	 				},
+	 				components:{
+	 					'bbb':{
+	 						template:'#bbb',
+	 						data(){
+	 							return{
+	 								msgb:'我是子组件数据'
+	 							}
+	 						},
+	 						methods:{
+	 							send:function(){
+	 								this.$emit('child-msg',this.msgb);
+	 							}
+	 						}
+	 						
+
+	 					}
+	 				}
+	 				
+	 			}
+	 		},
+	 	}).$mount('#box');
+	 
+	 </script>
+</body>
+</html>

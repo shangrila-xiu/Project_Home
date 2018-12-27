@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>vue动画</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" type="text/css" href="bower_components/css/animate.css">
+	<script type="text/javascript" src="bower_components/vue/dist/vue.js"></script>
+	<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background: #f0f;
+		}
+		.fade-transition{
+			transition: 1s all ease;
+		}
+		.fade-enter{
+			opacity: 0;
+		}
+		.fade-leave{
+			opacity: 0;
+			transform: translateX(200px);
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		bower  -> （偏向前端）包管理器
+			下载bower:
+				 npm install bower -g   //-g 全局安装
+				 bower --version   //验证是否安装成功
+
+			bower的用法：
+				bower install 包名
+				或者：bower uninstall 包名
+				bower info 包名   //查看该包的相关的信息
+	 
+
+Vue动画 
+	本质上是css3，transition 、 animation
+
+	 	<div id="div1" v-show="bSign" transition="fade"></div>
+	动画：
+		.fade-transition{
+			transition: 1s all ease;//定义的是时间
+		}
+		进入:
+			.fade-enter{
+				opacity: 0;
+			}
+		离开:
+			.fade-leave{
+				opacity: 0;
+				transform: translateX(200px);
+			}
+	 -->
+	 <div id="box">
+	 	<input type="button" name="" value="按钮" @click="toggle">
+	 	<div id="div1" v-show="bSign" transition="fade"></div>
+	 </div>
+	 <script type="text/javascript">
+	 	window.onload = function(){
+	 		new Vue({
+	 			el:'#box',
+	 			data:{
+	 				bSign:true
+	 			},
+	 			methods:{
+	 				// toggle:function(){
+	 				// 	alert(1);
+	 				// },
+	 				toggle(){
+	 					this.bSign=!this.bSign;
+	 					//alert(1);
+	 				}
+	 			},
+	 		});
+	 	};
+	 </script>
+</body>
+</html>
