@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="vue.js"></script>
+	<title></title>
+</head>
+<body>
+	<!-- 父组件每传一个对象给子组件，对象之间引用，推荐 -->
+	<div id="box">
+		<span>父级：-></span>{{giveDate.a}}
+		<br>
+		<child-msg :msg="giveDate"></child-msg>
+		<!-- <child-msg :msg.sync="a"></child-msg> vue1版本可以这样做-->
+	</div>
+
+	<template id="child">
+		<div>
+			<span>我是子组件数据</span>
+			<input type="button" name="" value="按钮" @click="change">
+			<strong>{{msg.a}}</strong>
+		</div>
+	</template>
+
+	<script type="text/javascript">
+		new Vue({
+			el:'#box',
+			data:{
+				giveDate:{
+					a:'我是父组件的数据'
+				}
+			},
+			
+			components:{
+				'child-msg':{
+					props:['msg'],
+					template:'#child',
+					methods:{
+						change(){
+							this.msg.a='改变了'
+						}
+					},
+				}
+			}
+		});
+	</script>
+</body>
+</html>
