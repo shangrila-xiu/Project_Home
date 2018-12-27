@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性</title>
+		<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body>
+		<div class="img">
+			<img :src="url" alt="风景图" title="山高"/>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:'.img',
+					data:{
+						url:'http://img0.imgtn.bdimg.com/it/u=2756744720,2526594572&fm=200&gp=0.jpg'
+					},
+					methods:{}
+				});
+			};
+		</script>
+	</body>
+</html>

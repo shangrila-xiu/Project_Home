@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--我用的是百度的来做的例子-->
+	<!--https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=&json=1&p=3&sid=1434_19033_21081_24328_24395&req=2&sc=eb&csor=0&pwd=a&cb=jQuery110208845317490843173_1506606779553&_=1506606779558-->
+    <meta charset="UTF-8">
+    <title>post交互</title>
+    
+    <style>
+
+    </style>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'body',
+                data:{
+
+                },
+                methods:{
+                    get:function(){
+                        this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+                           wd:'a',
+                        },{
+                            jsonp:'cb'
+                        }).then(function(res){
+                            alert(res.data.s);
+                        },function(res){
+                            alert(res.status);
+                        });
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" @click="get()">
+</body>
+</html>
+

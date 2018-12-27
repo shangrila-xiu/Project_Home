@@ -1,0 +1,134 @@
+/*样式*/
+body{
+	padding: 0;
+	margin: 0 auto;
+	min-width: 805px;
+}
+.container{
+	
+}
+.wrap{margin:100px;
+min-width: 480px;}
+/*标题样式*/
+.header{
+	border: 1px solid burlywood;
+	background-color: #A5BCFF;
+	color: white;
+	font-family: "agency fb";
+}
+/*无内容时的样式*/
+.noContent{
+	border: 1px solid burlywood;
+	background-color: #CCCCCC;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	height: 30px;
+	text-align: center;
+	
+}
+/*有内容时的样式*/
+.content{
+	margin-top: 10px;
+	background-color: burlywood;
+	border: 1px solid #A5BCFF;
+	height: 200px;
+	
+}
+.takeTextField{
+	margin: 20px;
+	border: 3px solid olivedrab;
+	margin-top;10px;
+	width: 560px;
+	height: 60px;
+	
+}
+.takeContent{
+	margin-right: 80px;
+	float: right;
+}
+#btn{
+	
+	margin-top: 150px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	background-color: green;
+	color: coral;
+	border: 2px solid orange;
+}
+span{
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+
+/*接收到写出来的东西*/
+.accept{
+	height:auto ;
+	border: 1px solid #A5BCFF;
+	margin-top: 10px;
+	background-color: burlywood;
+}
+#takeTextField{
+	margin: 19px;
+	border: 3px solid olivedrab;
+	margin-top;10px;
+	width: 1000px;
+	height: 60px;
+}
+.page{
+	float: right;
+}
+.page a{
+	text-decoration: none;
+}
+@media only screen  and (max-width: 1006px) {
+.takeContent{
+	margin-right: 80px;
+	float: right;
+}
+#btn{
+	margin-top: 10px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	background-color: green;
+	color: coral;
+	border: 2px solid orange;
+}
+span{
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+}
+
+@media only screen  and (max-width: 805px) {
+.takeContent{
+	margin-right: 80px;
+	float: right;
+}
+#btn{
+	margin-top: 10px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	background-color: green;
+	color: coral;
+	border: 2px solid orange;
+}
+span{
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+#takeTextField{
+	margin: 19px;
+	border: 3px solid olivedrab;
+	margin-top;10px;
+	width: 60px;
+	height: 60px;
+}
+}
+
+
+	.replyContent{line-height:24px;
+	font-size:14px;
+	color:#2b2b2b;
+	font-family:"Microsoft YaHei";
+	}
+

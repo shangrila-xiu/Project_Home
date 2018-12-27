@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>系统默认行为</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+				<input type="button" value="按钮1" @contextmenu="show1($event)" />
+				<!--下列这个是阻止默认行为的-->
+				<input type="button" value="按钮" @contextmenu.prevent="show()" />
+				 <p>按钮右击点下去会依次出现 弹窗 1， 还有右击的默认菜单</p>
+        		<p>按钮1右击只出现 弹窗 2</p>
+			
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:'#box',
+					data:{},
+					methods:{
+						show:function(ev){
+							alert('你成功了');
+							
+						},
+						//推荐使用
+						show1:function(event){
+							alert('你失败了');
+							event.preventDefault();
+						}
+					}
+				});
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			.red{
+				background-color: #E4B9C0;
+			}
+			.blue{
+				background: blue;
+			}
+		</style>
+		<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body id="box">
+		<div :style="{color:'#FF4949'}">json中的，写json的时候也是在data中写</div><!--json-->
+		<div :style="[c]">data中的,且写法是json的</div><!--data中的数据-->
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:'#box',
+					data:{
+						c:{
+							color:'#00ffff',
+							fontSize:'20px',
+							backgroundColor:'#00ccff'
+						}
+					}
+				});
+			};
+		</script>
+	</body>
+</html>

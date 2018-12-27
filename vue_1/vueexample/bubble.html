@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件冒泡</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<div @click="show1()">
+				<input type="button" value="按钮" @click="show($event)" />
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:'#box',
+					data:{},
+					methods:{
+						show:function(event){
+							alert("你已经失败了！");
+						},
+						show1:function(){
+							alert("你已经成功了！");
+						}
+					},
+				});
+			};
+		</script>
+		
+	</body>
+</html>

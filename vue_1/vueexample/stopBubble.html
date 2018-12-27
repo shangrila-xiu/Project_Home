@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>阻止事件冒泡</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<div @click="show1()">
+				
+				<input type="button" value="按钮" @click.stop="show()" />   <!--推荐使用-->
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:'#box',
+					data:{},
+					methods:{
+						show:function(event){
+							alert("你已经成功了！");
+//							event.cancelBubble=true;//这句阻止事件冒泡，下面的那句不会再执行
+						},
+						show1:function(){
+							alert("你已经失败了！");
+							
+							
+						}
+					},
+				});
+			};
+		</script>
+		
+	</body>
+</html>

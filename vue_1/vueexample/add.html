@@ -1,0 +1,31 @@
+<body>
+<div id="box">
+    <input type="text" v-model='command' @keyup.enter='add' />
+    <div v-show='list.length==0'>暂无留言</div>
+    <ul>
+        <li v-for="value in list"track-by=$index>{{value}}
+            <a href="javascript:;" @click='rm($index)'>删除</a>
+        </li>
+    </ul>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#box',
+        data:{
+            command:'',
+            list:[]    
+        },
+        methods:{
+            add:function(ev){
+                this.list.unshift(this.command)    
+                this.command='';
+            },
+            rm:function(index){
+                this.list.splice(index,1)    
+            }
+                               
+        }
+    })
+</script>
+</body>

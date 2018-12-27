@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- 
+	Vue.filter(name,function(){
+	
+	});
+
+
+	 -->
+	<div id="box">
+		
+		{{a | changeTime}}
+	</div>
+
+<script type="text/javascript">
+Vue.filter('changeTime',function(i){
+	var date=new Date(i);
+
+	
+	return date.getFullYear()+'-'+date.getHours()+':'+date.getMinutes();
+	});
+	new Vue({
+
+		data:{
+			a:Date.now()
+		},
+		methods:{
+			
+		}
+	}).$mount('#box');
+</script>
+</body>
+</html>

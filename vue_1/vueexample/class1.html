@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.active{
+				background: red;
+				
+			}
+			.red{
+				background-color: #E4B9C0;
+			}
+			.blue{
+				background: blue;
+			}
+		</style>
+		<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body id="box">
+		<div v-bind:class="{active:isActive}">1qqq</div>
+		<div :class="[red]">2222</div>
+		<!--red不是data中的数据-->
+		<div :class="{red:true}">qqqq</div>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:'#box',
+					data:{
+						isActive:true,
+						red:'blue',
+						
+						
+					}
+				});
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>vue实例简单方法</title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/vue-resource.js"></script> 
+</head>
+<body>
+	<!-- 
+		vm.$el   元素
+		vm.$data   数据
+		vm.$mount  挂载
+		vm.$options   获取自定义属性时可以使用
+		vm.$destroy   销毁对象
+		vm.$log        查看数据的状态
+	 -->
+	<div id="box">
+		{{a}}
+	</div>
+	<script type="text/javascript">
+		// var vm = new Vue({
+		// 	//el:'#box',//在27行注释掉
+		// 	data:{
+		// 		a:1
+		// 	},
+
+		// });
+		// // console.log("vue的元素:  "+ vm.$el);
+		// // vm.$el.style.background='red';
+		// // console.log("就是数据data"+vm.$data);
+		// // vm.$data.style.fontsize='11';//没有成功
+		// console.log("vue手动绑定，挂载！"+vm.$mount('#box'));
+		// 以上注释是从28行开始不需要的
+		var vm=new Vue({
+			aa:111,//自定义属性
+			data:{
+				a:1
+			},
+			show:function(){//自定义的函数
+				alert(1);
+			}
+		}).$mount('#box');
+		// console.log("vue的自定义属性："+vm.$options.aa);
+		// document.onclick = function(){
+		// 	vm.$options.show();
+		// }
+
+		console.log("查看数据的状态"+vm.$log());
+	</script>
+</body>
+</html>

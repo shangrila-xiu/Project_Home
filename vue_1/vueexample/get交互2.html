@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get交互</title>
+    <script src="js/vue.js"></script>
+    <script type="text/javascript" src="js/vue-resource.js" ></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#box',
+                data:{
+                },
+                methods:{
+                	get:function(){
+                		this.$http.get('get.php',{
+                			a:1,
+                			b:2
+                		}).then(function(res){
+       alert('成功了！');//成功在本文件夹创建了a.txt，打开它写入数据，是下面res.data将会返回的
+                			alert(res.data);//或得数据
+                		},function(){
+                			alert('失败了！');
+//              			alert(res.status);//获得状态码
+                		});
+                	}
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="button" value="按钮" @click="get()" />
+    </div>
+</body>
+</html>

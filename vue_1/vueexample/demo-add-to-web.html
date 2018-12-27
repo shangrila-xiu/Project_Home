@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/demo.css" /> 
+	<!--<link href="weibo/style/weibo.css" rel="stylesheet" type="text/css" />-->
+	<script type="text/javascript" src="js/vue-resource.js" ></script>
+	<script type="text/javascript" src="js/vue.js" ></script>
+	<script type="text/javascript">
+		window.onload=function(){
+
+			new Vue({
+				el:'.container',
+				data:{
+					t1:'',
+					myData:[]
+				},
+				methods:{
+					add:function(){
+              			this.myData.unshift(this.t1) //myData添加数据
+						this.t1=''; //将输入的数据清空 
+                            
+					}
+				}
+				
+			});
+		};
+	</script>
+	<body>
+		<div class="container">
+			<div class="wrap">
+				<div class="header">
+					<h2 align="center">留言板</h2>
+				</div>
+				
+				<div class="content">
+					<textarea class="takeTextField" v-model='t1' ></textarea>
+					<div class="takeContent">
+					<input type="button" id="btn" value="添加" @click='add'  />
+					
+					</div>
+				</div>
+				
+				<div class="noContent" v-show="myData.length==0">暂无数据。。。。</div>
+				<!--留言成功-->
+				<div class="accept">
+					<div id="takeTextField" v-for="val in myData" track-by=$index >
+						<p class="replyContent">{{val}}</p>
+					</div>
+					
+			</div>
+			
+		</div>
+	</body>
+</html>

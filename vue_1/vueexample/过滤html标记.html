@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- 
+	Vue.filter(name,function(){
+	
+	});
+
+
+	 -->
+	<div id="box">
+		<input type="text" name="" v-model="msg | filterHtml">
+		<p v-html="msg"></p>
+	</div>
+
+<script type="text/javascript">
+Vue.filter('filterHtml',{
+	// return i.replace(/<[^>]*>/g);
+	read:function(val){//val就是以获取的msg的值
+        return val.replace(/<[^<]+>/g);//去除文字的<...></...>标签
+    },
+    write:function(){
+        return val;
+    }
+    });
+	new Vue({
+
+		data:{
+			msg:'<strong>welcome</strong>'
+		},
+		
+	}).$mount('#box');
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- 
+	vue提供的一些过滤器：
+			capitalize
+			uppercase
+			currency   美元符号
+
+
+			debounce 配合事件使用， 延迟访问
+		数据配合使用的过滤器：
+			limitBy n      限制几个
+			limitBy n    参数取几个
+			limitBy m n    m取几个 ，n从哪里开始
+			
+
+		filterBy    过滤数据
+		orderBy     排序
+			orderBy 1  正序
+			orderBy 2  倒序
+
+
+
+	 -->
+	<div id="box">
+		<!-- <input type="text" name="" @keyup="show | debounce 200"> -->
+	<input type="text" name="" v-model="chose">
+
+	<ul>
+		<!-- <li v-for="val in arr | limitBy 2" >{{val}}</li> -->
+		<!-- <li v-for="val in arr | limitBy 2 1">{{val}}</li>   --> <!--
+		结果为：2
+				3
+		从索引为1开始取，取2个数
+	-->
+	<!-- <li v-for="val in arr | limitBy 2 arr.length-2">{{val}}</li> --><!--取最后两条数据-->
+
+	<li v-for="val in arr1 | filterBy chose ">{{val}}</li>
+	</ul>
+	</div>
+
+<script type="text/javascript">
+	new Vue({
+
+		data:{
+			arr:['1','2','3','4','5'],
+			arr1:['orange','tomato','apple','pear','width','height','objec'],
+			chose:''
+		},
+		methods:{
+			show:function(){
+				alert(1);
+			}
+		}
+	}).$mount('#box');
+</script>
+</body>
+</html>
