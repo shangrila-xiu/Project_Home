@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<!-- 引入jquery -->
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<!-- 引入echarts -->
+	<script src="echarts.min.js"></script>
+</head>
+<body>
+	<div id="main" style="width: 1000px;height: 600px;"></div>
+	<script>
+		var myCharts = echarts.init(document.getElementById('main'));
+		//指定图标的配置项和数据
+		var option = {
+			// 标题
+			title:{
+				text: 'Echarts （调接口）模拟访问数'
+			},
+			// 提示
+			tooltip:{
+				trigger:'axis'
+			},
+			// 工具箱
+			toolbox:{
+				show: true,
+				feature: {
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			// 图例
+			legend: {
+				data: ['10天访问量']
+			},
+			// x轴
+			xAxis: {
+				data: []
+			},
+			yAxis: {},
+			// 数据
+			series: [{
+				name: '10天访问量',
+				type: 'bar',
+				data: []
+			}]
+		};
+
+myCharts.showLoading(); //数据加载完之前先显示一段简单的loading动画
+		
+
+		// 下面开始调接口数据
+		var xAName=[];
+		var yANums=[];
+		$.ajax({
+			type : "get",
+			async : true, //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）
+			dataType : "json",
+			url:'http://www.haoeasy.cn/api/v1.0//user/analysis/recentdays',
+			data:{
+				days:10
+			},
+			success : function(data) {
+				if(data.code===1){
+					console.log(data.result)
+					xAName=data.result.x;
+					yANums=data.result.y;
+					alert(xAName);alert(yANums);
+					myCharts.hideLoading();//隐藏加载画面
+					myCharts.setOption({
+						xAxis:{
+							data: xAName
+						},
+						series: [{
+							name: '10天访问量',
+							data: yANums
+					}]
+					});
+
+				}else{
+					alert("请求后台获取数据失败")
+				}
+				// console.log(data);
+			},
+			error:function(errorMsg) {
+				alert("图表请求错误");
+				myCharts.hideLoading();
+				/* Act on the event */
+			}
+		});
+		
+		// 使用刚设置的数据项和数据显示图标
+		myCharts.setOption(option);	
+			
+		
+	</script>
+</body>
+</html>
