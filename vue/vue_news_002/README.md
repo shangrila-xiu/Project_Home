@@ -1,6 +1,6 @@
 # vue_news_002
 
-> A Vue.js project
+>这个项目是写一个新闻的。
 
 ## Build Setup
 
