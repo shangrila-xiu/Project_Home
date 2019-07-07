@@ -1,0 +1,1 @@
+<view><uni-card vue-id="1" title="首页" thumbnail extra="额外信息" note="Tips" bind:__l="__l" vue-slots="{{['default']}}"><text class="title">设备总数： 89台</text><text class="describe">在线率：16.85% | 在线设备：15</text><image src="../../../static/machine.png" mode="widthFix"></image></uni-card></view>

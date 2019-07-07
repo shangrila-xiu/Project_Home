@@ -1,0 +1,75 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	// 首页
+		{
+			"path": "pages/index/index",
+			"style": {
+				// "navigationBarTitleText": "uni-app"
+			}
+		}
+		// 我的，个人中心
+	    ,{
+            "path" : "pages/tabBar/components/my/my",
+            "style" : {}
+        }
+		// 酒店
+        ,{
+            "path" : "pages/tabBar/components/hotel/hotel",
+            "style" : {}
+        }
+		// 订单
+        ,{
+            "path" : "pages/tabBar/components/order/order",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/components/banner/banner",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/components/contents/manage/manage",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/components/contents/shortcuts/shortcuts",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "首页",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"color":"#707070",
+		"selectedColor":"#DE533A",
+		"list" : [
+		        {
+		            "pagePath" : "pages/index/index",
+		            "text" : "首页",
+		            "iconPath" : "static/index1.png",
+		            "selectedIconPath" : "static/index.png"
+		        },
+		        {
+		            "pagePath" : "pages/tabBar/components/order/order",
+		            "text" : "订单",
+		            "iconPath" : "static/order1.png",
+		            "selectedIconPath" : "static/order.png"
+		        },
+				{
+				    "pagePath" : "pages/tabBar/components/hotel/hotel",
+				    "text" : "酒店",
+				    "iconPath" : "static/hotel1.png",
+				    "selectedIconPath" : "static/hotel.png"
+				},
+		        {
+		            "pagePath" : "pages/tabBar/components/my/my",
+		            "text" : "我的",
+		            "iconPath" : "static/my1.png",
+		            "selectedIconPath" : "static/my.png"
+		        }
+		    ]
+	}
+	
+}

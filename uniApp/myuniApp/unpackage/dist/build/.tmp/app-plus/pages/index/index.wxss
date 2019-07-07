@@ -1,0 +1,87 @@
+
+uni-card{
+		margin: 10rpx;
+		display: block;
+		height: 280rpx;
+		width: widthFix;
+		background: -webkit-gradient(linear, left top, right top, from(#F5F5F5) , color-stop(#fcfcfc),to(#F5F5F5) );
+		background: -webkit-linear-gradient(left, #F5F5F5 , #fcfcfc,#F5F5F5 );
+		background: -o-linear-gradient(left, #F5F5F5 , #fcfcfc,#F5F5F5 );
+		background: linear-gradient(to right, #F5F5F5 , #fcfcfc,#F5F5F5 ); /* 标准的语法 */
+}
+uni-card .title{
+		position: absolute;
+		top: 10%;
+		left: 20%;
+		/* letter-spacing: 10upx; */
+		font-size: 28rpx;
+		font-weight: 900;
+}
+uni-card .describe{
+		position: absolute;
+		top: 15%;
+		left: 5%;
+}
+uni-card image{
+		float: right;
+		margin-top: 30rpx;
+		margin-right: 30rpx;
+		width: 200rpx;
+		height: 200rpx;
+}
+
+
+.uni-title text{
+		color: #000000;
+}
+.uni-title .DailyVNumColor{
+		color:orange;
+}
+.manage{
+	font-size: 24rpx;
+	font-weight: 900;
+	font-family: 'song';
+	position: absolute;
+	left: 2%;
+	top: 32%;
+	letter-spacing: 5rpx;
+}
+.uni-common-mt{
+	/* margin-top: 101upx; */
+}
+.flex-item{
+	margin-top: 100rpx;
+	height: 120rpx;
+	text-align: center;
+	width: 50%;
+}
+.DailyVNum{
+	height: 40rpx;
+	padding-bottom: 10rpx;
+	/* border: 1px solid #000000; */
+	display: block;
+}
+.DailyV{
+}
+
+
+.shortcut{
+		height: 40px;
+   line-height: 60px;
+   text-align: center;
+}
+.leftLine,.rightLine{
+		display: inline-block;
+   width: 120px;
+		border: 1px solid #ccc;
+}
+.shortcuts{
+	margin: 20rpx;
+	vertical-align: middle;
+	font-size: 24rpx;
+	font-weight: 900;
+	font-family: 'song';
+	letter-spacing: 5rpx;
+}
+
+

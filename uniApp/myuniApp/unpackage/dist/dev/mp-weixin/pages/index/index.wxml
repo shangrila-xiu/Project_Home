@@ -1,0 +1,1 @@
+<view><v-banner vue-id="1" bind:__l="__l"></v-banner><v-manage vue-id="2" bind:__l="__l"></v-manage><v-short-cuts vue-id="3" bind:__l="__l"></v-short-cuts></view>

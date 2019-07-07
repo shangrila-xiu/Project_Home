@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "v-banner": "/pages/components/banner/banner",
+    "v-manage": "/pages/components/contents/manage/manage",
+    "v-short-cuts": "/pages/components/contents/shortcuts/shortcuts"
+  }
+}

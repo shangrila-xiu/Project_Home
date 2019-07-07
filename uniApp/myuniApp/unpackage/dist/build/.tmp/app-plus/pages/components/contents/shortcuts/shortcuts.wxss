@@ -1,0 +1,21 @@
+
+.shortcut{
+		height: 40px;
+   line-height: 60px;
+   text-align: center;
+}
+.leftLine,.rightLine{
+		display: inline-block;
+   width: 120px;
+		border: 1px solid #ccc;
+}
+.shortcuts{
+	margin: 20rpx;
+	vertical-align: middle;
+	font-size: 24rpx;
+	font-weight: 900;
+	font-family: 'song';
+	letter-spacing: 5rpx;
+}
+
+

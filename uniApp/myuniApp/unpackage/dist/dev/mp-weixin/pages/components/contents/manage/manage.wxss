@@ -1,0 +1,34 @@
+
+.uni-title text{
+		color: #000000;
+}
+.uni-title .DailyVNumColor{
+		color:orange;
+}
+.manage{
+	font-size: 24rpx;
+	font-weight: 900;
+	font-family: 'song';
+	position: absolute;
+	left: 2%;
+	top: 32%;
+	letter-spacing: 5rpx;
+}
+.uni-common-mt{
+	/* margin-top: 101upx; */
+}
+.flex-item{
+	margin-top: 100rpx;
+	height: 120rpx;
+	text-align: center;
+	width: 50%;
+}
+.DailyVNum{
+	height: 40rpx;
+	padding-bottom: 10rpx;
+	/* border: 1px solid #000000; */
+	display: block;
+}
+.DailyV{
+}
+

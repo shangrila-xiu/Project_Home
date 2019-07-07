@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tabBar/components/my/my",
+    "pages/tabBar/components/hotel/hotel",
+    "pages/tabBar/components/order/order",
+    "pages/components/banner/banner",
+    "pages/components/contents/manage/manage",
+    "pages/components/contents/shortcuts/shortcuts"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "首页",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#DE533A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/index1.png",
+        "selectedIconPath": "static/index.png"
+      },
+      {
+        "pagePath": "pages/tabBar/components/order/order",
+        "text": "订单",
+        "iconPath": "static/order1.png",
+        "selectedIconPath": "static/order.png"
+      },
+      {
+        "pagePath": "pages/tabBar/components/hotel/hotel",
+        "text": "酒店",
+        "iconPath": "static/hotel1.png",
+        "selectedIconPath": "static/hotel.png"
+      },
+      {
+        "pagePath": "pages/tabBar/components/my/my",
+        "text": "我的",
+        "iconPath": "static/my1.png",
+        "selectedIconPath": "static/my.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap2.json"
+}
